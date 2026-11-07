@@ -1,26 +1,248 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@plugin "daisyui" {
+  themes: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "strawberry-cream";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #fff8f4;
+  --color-base-200: #f8ebe3;
+  --color-base-300: #f0d9ce;
+  --color-base-content: #3c2428;
+  --color-primary: #9e3348;
+  --color-primary-content: #fff8f4;
+  --color-secondary: #f4c3c8;
+  --color-secondary-content: #3c2428;
+  --color-accent: #7c2e40;
+  --color-accent-content: #fff8f4;
+  --color-neutral: #4a3336;
+  --color-neutral-content: #fff8f4;
+  --color-info: #5e7e92;
+  --color-info-content: #f7fbfc;
+  --color-success: #4f7a56;
+  --color-success-content: #f6fbf6;
+  --color-warning: #a67a32;
+  --color-warning-content: #fff8ee;
+  --color-error: #a33b4e;
+  --color-error-content: #fff8f4;
+  --radius-selector: 1rem;
+  --radius-field: 1rem;
+  --radius-box: 1.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: "lavender-dreams";
+  default: false;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #fbfaff;
+  --color-base-200: #f1eaf8;
+  --color-base-300: #e3d5f1;
+  --color-base-content: #2c2438;
+  --color-primary: #644787;
+  --color-primary-content: #fbfaff;
+  --color-secondary: #d9c9f0;
+  --color-secondary-content: #2c2438;
+  --color-accent: #4e3670;
+  --color-accent-content: #fbfaff;
+  --color-neutral: #3a3148;
+  --color-neutral-content: #fbfaff;
+  --color-info: #5e7e92;
+  --color-info-content: #f7fbfc;
+  --color-success: #4f7a56;
+  --color-success-content: #f6fbf6;
+  --color-warning: #a67a32;
+  --color-warning-content: #fff8ee;
+  --color-error: #9a4568;
+  --color-error-content: #fff8f8;
+  --radius-selector: 1rem;
+  --radius-field: 1rem;
+  --radius-box: 1.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: "matcha-garden";
+  default: false;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #f6f5ef;
+  --color-base-200: #e6eee0;
+  --color-base-300: #d3e0c8;
+  --color-base-content: #1f2c22;
+  --color-primary: #3e6844;
+  --color-primary-content: #f6f5ef;
+  --color-secondary: #c9d9ba;
+  --color-secondary-content: #1f2c22;
+  --color-accent: #2f5134;
+  --color-accent-content: #f6f5ef;
+  --color-neutral: #2a382c;
+  --color-neutral-content: #f6f5ef;
+  --color-info: #5e7e92;
+  --color-info-content: #f7fbfc;
+  --color-success: #3f6b46;
+  --color-success-content: #f6fbf6;
+  --color-warning: #a67a32;
+  --color-warning-content: #fff8ee;
+  --color-error: #9a4540;
+  --color-error-content: #fff8f6;
+  --radius-selector: 1rem;
+  --radius-field: 1rem;
+  --radius-box: 1.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: "vanilla-cocoa";
+  default: false;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #fbf7f2;
+  --color-base-200: #f3eadf;
+  --color-base-300: #e6d4c2;
+  --color-base-content: #2e2118;
+  --color-primary: #7a4b30;
+  --color-primary-content: #fbf7f2;
+  --color-secondary: #e7c09a;
+  --color-secondary-content: #2e2118;
+  --color-accent: #5c3824;
+  --color-accent-content: #fbf7f2;
+  --color-neutral: #3c2c22;
+  --color-neutral-content: #fbf7f2;
+  --color-info: #6e6558;
+  --color-info-content: #fbf7f2;
+  --color-success: #5d6b45;
+  --color-success-content: #f8f6ef;
+  --color-warning: #a67a32;
+  --color-warning-content: #fff8ee;
+  --color-error: #8d4034;
+  --color-error-content: #fff8f4;
+  --radius-selector: 1rem;
+  --radius-field: 1rem;
+  --radius-box: 1.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: clip;
+  background:
+    radial-gradient(
+      ellipse 70% 40% at 0% -10%,
+      color-mix(in oklab, var(--color-secondary) 70%, transparent),
+      transparent 55%
+    ),
+    var(--color-base-100);
+  color: var(--color-base-content);
+  font-family: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+}
+
+section[id] {
+  scroll-margin-top: 6.5rem;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-primary) 24%, white);
+  color: var(--color-base-content);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
+}
+
+.text-muted {
+  color: color-mix(in oklab, var(--color-base-content) 74%, transparent);
+}
+
+.shadow-soft {
+  box-shadow:
+    0 1px 2px color-mix(in oklab, var(--color-base-content) 6%, transparent),
+    0 18px 40px -24px color-mix(in oklab, var(--color-base-content) 38%, transparent);
+}
+
+.shadow-lift {
+  box-shadow:
+    0 2px 6px color-mix(in oklab, var(--color-base-content) 7%, transparent),
+    0 28px 54px -24px color-mix(in oklab, var(--color-base-content) 42%, transparent);
+}
+
+.shell {
+  margin-inline: auto;
+  width: min(100% - 2.5rem, 72rem);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 80;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--color-primary-content);
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.studio-dialog {
+  margin: auto;
+  width: min(calc(100% - 1.5rem), 56rem);
+  max-height: min(92dvh, 46rem);
+  overflow: auto;
+  border: 1px solid var(--color-base-300);
+  border-radius: 1.75rem;
+  background: var(--color-base-100);
+  color: var(--color-base-content);
+  padding: 0;
+}
+
+.studio-dialog::backdrop {
+  background: color-mix(in oklab, var(--color-neutral) 46%, transparent);
+}
+
+.organic {
+  border-radius: 58% 42% 48% 52% / 46% 54% 46% 54%;
 }
